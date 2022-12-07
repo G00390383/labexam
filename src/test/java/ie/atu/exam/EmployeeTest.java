@@ -21,12 +21,16 @@ class EmployeeTest {
         assertEquals("Darragh", myEmployee.getName());
     }
 
-    @Test
+    /*@Test
     void addNameFail(){
         Employee myEmployee = new Employee("Darragh", 123455, 123, "Man", "Full-time", 21);
         assertThrows(IllegalArgumentException, "Invalid name entered");
+    }*/
 
-
+    @Test
+    void addPpsnPass(){
+        Employee myEmployee = new Employee("Darragh", 123455, 123, "Man", "Full-time", 21);
+        assertEquals("123455", myEmployee.getPpsn());
     }
 
     @AfterEach

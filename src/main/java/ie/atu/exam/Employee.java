@@ -22,7 +22,12 @@ public class Employee {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if(name.length() >= 5 && name.length() <= 22){
+            this.name = name;
+        }
+        else{
+            throw new IllegalArgumentException("Invalid name entered");
+        }
     }
 
     public int getPpsn() {
@@ -30,7 +35,12 @@ public class Employee {
     }
 
     public void setPpsn(int ppsn) {
-        this.ppsn = ppsn;
+        if(ppsn >= 100000 && ppsn < 1000000){
+            this.ppsn = ppsn;
+        }
+        else{
+            throw new IllegalArgumentException("Invalid ppsn entered");
+        }
     }
 
     public long getPhone() {
