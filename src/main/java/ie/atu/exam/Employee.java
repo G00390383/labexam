@@ -74,7 +74,12 @@ public class Employee {
     }
 
     public void setEmpType(String empType) {
-        this.empType = empType;
+        if("full-time".equalsIgnoreCase(this.empType)||"part-time".equalsIgnoreCase(this.empType)){
+            this.empType = empType;
+        }
+        else{
+            throw new IllegalArgumentException("Invalid employement type entered");
+        }
     }
 
     public int getAge() {

@@ -62,6 +62,30 @@ class EmployeeTest {
         Employee myEmployee = new Employee("Darragh", 1234552, 123, "Man", "Full-time", 21);
         assertThrows(IllegalArgumentException, "Invalid ppsn entered");
     }*/
+
+    @Test
+    void addEmpTypePass(){
+        Employee myEmployee = new Employee("Darragh", 123455, 12345678910L, "man", "full-time", 21);
+        assertEquals("full-time", myEmployee.getEmpType());
+    }
+
+    /*@Test
+    void addPpsnFail(){
+        Employee myEmployee = new Employee("Darragh", 1234552, 123, "Man", "Full-time", 21);
+        assertThrows(IllegalArgumentException, "Invalid ppsn entered");
+    }*/
+
+    @Test
+    void addEmpTypePass(){
+        Employee myEmployee = new Employee("Darragh", 123455, 12345678910L, "man", "full-time", 21);
+        assertEquals("full-time", myEmployee.getEmpType());
+    }
+
+    /*@Test
+    void addPpsnFail(){
+        Employee myEmployee = new Employee("Darragh", 1234552, 123, "Man", "Full-time", 21);
+        assertThrows(IllegalArgumentException, "Invalid ppsn entered");
+    }*/
     @AfterEach
     void tearDown() {
     }
