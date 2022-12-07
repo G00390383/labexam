@@ -48,7 +48,12 @@ public class Employee {
     }
 
     public void setPhone(long phone) {
-        this.phone = phone;
+        if(phone >= 10000000000L && phone < 100000000000L){
+            this.phone = phone;
+        }
+        else{
+            throw new IllegalArgumentException("Invalid phone entered");
+        }
     }
 
     public String getGender() {
@@ -56,7 +61,12 @@ public class Employee {
     }
 
     public void setGender(String gender) {
-        this.gender = gender;
+        if("man".equalsIgnoreCase(this.gender)||"woman".equalsIgnoreCase(this.gender)||"non-binary".equalsIgnoreCase(this.gender)){
+            this.gender = gender;
+        }
+        else{
+            throw new IllegalArgumentException("Invalid gender entered");
+        }
     }
 
     public String getEmpType() {

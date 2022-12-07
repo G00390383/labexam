@@ -30,7 +30,31 @@ class EmployeeTest {
     @Test
     void addPpsnPass(){
         Employee myEmployee = new Employee("Darragh", 123455, 123, "Man", "Full-time", 21);
-        assertEquals("123455", myEmployee.getPpsn());
+        assertEquals(123455, myEmployee.getPpsn());
+    }
+
+    /*@Test
+    void addPpsnFail(){
+        Employee myEmployee = new Employee("Darragh", 1234552, 123, "Man", "Full-time", 21);
+        assertThrows(IllegalArgumentException, "Invalid ppsn entered");
+    }*/
+
+    @Test
+    void addPhonePass(){
+        Employee myEmployee = new Employee("Darragh", 123455, 12345678910L, "Man", "Full-time", 21);
+        assertEquals(12345678910L, myEmployee.getPhone());
+    }
+
+    /*@Test
+    void addPpsnFail(){
+        Employee myEmployee = new Employee("Darragh", 1234552, 123, "Man", "Full-time", 21);
+        assertThrows(IllegalArgumentException, "Invalid ppsn entered");
+    }*/
+
+    @Test
+    void addGenderPass(){
+        Employee myEmployee = new Employee("Darragh", 123455, 12345678910L, "man", "Full-time", 21);
+        assertEquals("man", myEmployee.getGender());
     }
 
     /*@Test
