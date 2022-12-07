@@ -14,7 +14,7 @@ class EmployeeTest {
 
     @Test
     void addNamePass(){
-        Employee myEmployee = new Employee("Darragh", 123455, 089123456789, "Man", "Full-time", 21);
+        Employee myEmployee = new Employee("Darragh", 123455, 089123456789l, "Man", "Full-time", 21);
         assertEquals("Darragh", Employee.getName);
     }
 
