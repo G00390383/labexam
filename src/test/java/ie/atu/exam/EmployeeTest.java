@@ -23,7 +23,7 @@ class EmployeeTest {
 
     /*@Test
     void addNameFail(){
-        Employee myEmployee = new Employee("Darragh", 123455, 123, "Man", "Full-time", 21);
+        Employee myEmployee = new Employee("Dar", 123455, 123, "Man", "Full-time", 21);
         assertThrows(IllegalArgumentException, "Invalid name entered");
     }*/
 
@@ -33,6 +33,11 @@ class EmployeeTest {
         assertEquals("123455", myEmployee.getPpsn());
     }
 
+    /*@Test
+    void addPpsnFail(){
+        Employee myEmployee = new Employee("Darragh", 1234552, 123, "Man", "Full-time", 21);
+        assertThrows(IllegalArgumentException, "Invalid ppsn entered");
+    }*/
     @AfterEach
     void tearDown() {
     }
